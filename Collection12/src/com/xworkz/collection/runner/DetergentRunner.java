@@ -24,7 +24,8 @@ public class DetergentRunner {
         ref.stream().sorted((a,b)->a.getBrand().compareTo(b.getBrand())).forEach(ref2-> System.out.println(ref2));
         System.out.println("============================");
         ref.stream().sorted((a,b)->Integer.compare(b.getQuantity(),a.getQuantity())).forEach(ref3-> System.out.println(ref3));
-
+        System.out.println("=========================");
+        ref.stream().filter(a ->a.getPricePerKg()<100).forEach(a-> System.out.println(a));
 
     }
 
