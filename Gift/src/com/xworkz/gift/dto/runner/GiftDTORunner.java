@@ -18,8 +18,6 @@ public class GiftDTORunner {
         GiftDTO gift9 = new GiftDTO(1, "Book", 20.0, "Prema", "Rehan");
         GiftDTO gift10 = new GiftDTO(2, "Watch", 50.0, "Vinayak", "Charan");
 
-
-
        Set<GiftDTO> giftDTOS=new HashSet<GiftDTO>();
        giftDTOS.add(gift1);
        giftDTOS.add(gift2);
@@ -36,6 +34,8 @@ public class GiftDTORunner {
         System.out.println("==========================");
         giftDTOS.stream().sorted((a,b)->a.getName().compareTo(b.getName())).forEach(show-> System.out.println(show));
         System.out.println("==========================");
+        giftDTOS.stream().forEach(ref-> System.out.println(ref.getId()));
+        giftDTOS.stream().forEach(ref-> System.out.println(ref.getId()));
         giftDTOS.stream().forEach(ref-> System.out.println(ref.getId()));
         System.out.println("==========================");
         giftDTOS.stream().sorted((a,b)->a.getFrom().compareTo(b.getFrom())).forEach(display -> System.out.println(display.getFrom()));
